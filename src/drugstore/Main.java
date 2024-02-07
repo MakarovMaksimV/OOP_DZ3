@@ -13,39 +13,45 @@ public class Main {
         Component azitronite = new Azitronite("Azitronite", 2D, 14);
         Component penicillin = new Penicillin("Penicillin", 1.6D, 6);
 
-        Pharmacy p1 = new Pharmacy();
-        p1.addComponents(penicillin,water);
+        List<Pharmacy> pharmacyList = new ArrayList<>();
+        Pharmacy drug1 = new Pharmacy();
+        drug1.addComponents(penicillin,water);
+        pharmacyList.add(drug1);
+        Pharmacy drug2 = new Pharmacy();
+        drug2.addComponents(azitronite,water);
+        pharmacyList.add(drug2);
+//        Pharmacy2 drug3 = new Pharmacy2();
+//        drug3.addComponents(water, azitronite);
+//        Pharmacy2 drug4 = new Pharmacy2();
+//        drug4.addComponents(penicillin, water);
 
-        Pharmacy p2 = new Pharmacy();
-        p2.addComponents(azitronite,water);
-
-        Pharmacy2 p3 = new Pharmacy2();
-        p3.addComponents(water, azitronite);
-//
-//        Pharmacy2 p4 = new Pharmacy2();
-//        p3.addComponents(penicillin, water);
-//
         List<Component> components = new ArrayList<>();
-
         components.add(azitronite);
         components.add(water);
         components.add(penicillin);
 
-        System.out.println(components);
-        Collections.sort(components);
-        System.out.println(components);
 
-//        Iterator<Component> iterator = p1;
+
+//        System.out.println(components);
+//        Collections.sort(components);
+
+//        System.out.println(pharmacyList);
+//        Collections.sort(pharmacyList);
+//        System.out.println(pharmacyList);
+
+
+
+//        Iterator<Component> iterator = drug1;
 //        while (iterator.hasNext()) {
-//            System.out.println(p1.next().toString());
-//        }
-//
-//        Iterator<Component> iterator2 = p2;
-//        while (iterator2.hasNext()) {
-//            System.out.println(p2.next().toString());
+//            System.out.println(drug1.next().toString());
 //        }
 
-//        for (Component c : p3) {
+//        Iterator<Component> iterator2 = drug2;
+//        while (iterator2.hasNext()) {
+//            System.out.println(drug2.next().toString());
+//        }
+
+//        for (Component c : drug3) {
 //            System.out.println(c);
 //        }
 
