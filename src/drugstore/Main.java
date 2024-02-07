@@ -12,42 +12,29 @@ public class Main {
         Component water = new Water("Water", 10D, 1);
         Component azitronite = new Azitronite("Azitronite", 2D, 14);
         Component penicillin = new Penicillin("Penicillin", 1.6D, 6);
+        Component vitasporin = new Penicillin("Vitasporin", 1.1D, 17);
 
-        Pharmacy p1 = new Pharmacy();
-        p1.addComponents(penicillin,water);
+        List<Pharmacy> pharmacyList = new ArrayList<>();
 
-        Pharmacy p2 = new Pharmacy();
-        p2.addComponents(azitronite,water);
 
-        Pharmacy2 p3 = new Pharmacy2();
-        p3.addComponents(water, azitronite);
-//
-//        Pharmacy2 p4 = new Pharmacy2();
-//        p3.addComponents(penicillin, water);
-//
+        Pharmacy pharm1 = new Pharmacy("Azitronite");
+        pharm1.addComponents(azitronite,water);
+        pharmacyList.add(pharm1);
+        Pharmacy pharm2 = new Pharmacy("Vitasporin");
+        pharm2.addComponents(vitasporin,water,water);
+        pharmacyList.add(pharm2);
+        Pharmacy pharm3 = new Pharmacy("Penicilin");
+        pharm3.addComponents(penicillin,water);
+        pharmacyList.add(pharm3);
+
         List<Component> components = new ArrayList<>();
-
         components.add(azitronite);
         components.add(water);
         components.add(penicillin);
+        components.add(vitasporin);
 
-        System.out.println(components);
-        Collections.sort(components);
-        System.out.println(components);
-
-//        Iterator<Component> iterator = p1;
-//        while (iterator.hasNext()) {
-//            System.out.println(p1.next().toString());
-//        }
-//
-//        Iterator<Component> iterator2 = p2;
-//        while (iterator2.hasNext()) {
-//            System.out.println(p2.next().toString());
-//        }
-
-//        for (Component c : p3) {
-//            System.out.println(c);
-//        }
-
+        System.out.println("До сортировки" + pharmacyList);
+        Collections.sort(pharmacyList);
+        System.out.println("После сортировки" + pharmacyList);
     }
 }
