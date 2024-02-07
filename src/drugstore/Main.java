@@ -14,12 +14,12 @@ public class Main {
         Component penicillin = new Penicillin("Penicillin", 1.6D, 6);
 
         List<Pharmacy> pharmacyList = new ArrayList<>();
-        Pharmacy drug1 = new Pharmacy();
-        drug1.addComponents(penicillin,water);
-        pharmacyList.add(drug1);
-        Pharmacy drug2 = new Pharmacy();
-        drug2.addComponents(azitronite,water);
-        pharmacyList.add(drug2);
+        Pharmacy newPenicilin = new Pharmacy();
+        newPenicilin.addComponents(penicillin,water);
+        pharmacyList.add(newPenicilin);
+        Pharmacy newAzitronite = new Pharmacy();
+        newAzitronite.addComponents(penicillin,water);
+        pharmacyList.add(newAzitronite);
 //        Pharmacy2 drug3 = new Pharmacy2();
 //        drug3.addComponents(water, azitronite);
 //        Pharmacy2 drug4 = new Pharmacy2();
@@ -35,9 +35,9 @@ public class Main {
 //        System.out.println(components);
 //        Collections.sort(components);
 
-//        System.out.println(pharmacyList);
-//        Collections.sort(pharmacyList);
-//        System.out.println(pharmacyList);
+        System.out.println(pharmacyList);
+        Collections.sort(pharmacyList);
+        System.out.println(pharmacyList);
 
 
 
